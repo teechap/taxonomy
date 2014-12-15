@@ -1,3 +1,12 @@
+var Bee = function(){
+    Grub.call(this);
+    this.age = 5;
+    this.color = "yellow";
+    this.job = "Keep on growing";
+};
+Bee.prototype = Object.create(Grub.prototype);
+Bee.prototype.constructor = Bee;
+
 describe('Bee class functionality', function() {
 
   verifyClass(Bee).followsPattern('pseudoclassical', {}, false);
